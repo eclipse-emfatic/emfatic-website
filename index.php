@@ -56,7 +56,7 @@
     <a href="http://www.eclipse.org/modeling">Eclipse Modeling Project</a> <span class="divider">/</span>
   </li>
   <li>
-    <a href="http://www.eclipse.org/modeling/emft">Eclipse Modeling Framework Technology (EMFT)</a> <span class="divider">/</span>
+    <a href="http://www.eclipse.org/modeling/emft">Eclipse Modeling Framework Technology</a> <span class="divider">/</span>
   </li>
   <li class="active">
     <a href="#">Emfatic</a>
