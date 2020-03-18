@@ -69,7 +69,7 @@
 	</div>
 	
 	<div class="row">
-		<div class="span8">
+		<div class="span7">
 
 		<h2>Language reference</h2>
 This article details the syntax of Emfatic and the
@@ -103,15 +103,23 @@ elements of the generated Ecore model.&nbsp; Thus the simplest possible
 Emfatic program would look something like this:<br>
 <br>
 </div>
-<div class="span4">
+<div class="span5">
 			<h3>Update site</h3>
 			<div class="alert alert-info"><b>http://download.eclipse.org/emfatic/update</b></div>
 			<div class="alert alert-warning"><b>Warning:</b> The current version of Emfatic is <b>0.8.0</b>. 
 			If you've installed a previous version of Emfatic from a different update site you'll need to uninstall it before installing this one.</div>
 			
 		</div>
-		
-		<div class="span4">
+		<div class="span5">
+      <h3>Source code</h3>
+      
+      <ul>
+        <li><b>Non-committers:</b> https://git.eclipse.org/r/www.eclipse.org/emfatic.git
+        <li><b>Committers:</b> ssh://user@git.eclipse.org:29418/www.eclipse.org/emfatic.git
+      </ul>
+            
+    </div>
+		<div class="span5">
 			<h3>Links</h3>
 			<ul class="nav nav-pills nav-stacked">
 			  <li class="active"><a href="#">Home</a>
@@ -120,16 +128,7 @@ Emfatic program would look something like this:<br>
 			  <li><a href="http://www.emn.fr/z-info/atlanmod/index.php/Emfatic">A Large Collection of Emfatic Models</a>
 			</ul>
 		</div>
-		<div class="span4">
-			<h3>Source code</h3>
-			
-			<ul>
-				<li><b>Server:</b> cvs.eclipse.org
-				<li><b>Repository:</b> /cvsroot/modeling
-				<li><b>Module:</b> org.eclipse.emf/org.eclipse.emf.emfatic
-			</ul>
-						
-		</div>
+		
 <div class="span12">
 <pre>package p;</pre>
 Specifying values for the <code>EPackage</code>
