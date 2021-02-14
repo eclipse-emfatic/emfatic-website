@@ -91,18 +91,6 @@ plugins:
         j2_block_end_string: '%}}}'
         j2_variable_start_string: '{{{'
         j2_variable_end_string: '}}}'
-    - redirects:
-        redirect_maps:
-            'forum': 'https://www.eclipse.org/forums/index.php/f/22/'
-            'doc/screencasts' : 'https://www.youtube.com/epsilondevs'
-            'doc/lectures' : 'https://www.youtube.com/playlist?list=PLRwHao6Ue0YUecg7vEUQTrtySIWwrd_mI'
-            'doc/examples' : 'https://git.eclipse.org/c/epsilon/org.eclipse.epsilon.git/tree/examples'
-            'doc/articles/emfatic.md': 'https://www.eclipse.org/emfatic'
-            'doc/articles/eugenia-gmf-tutorial/index.md': 'https://www.eclipse.org/epsilon/doc/eugenia'
-            'doc/articles/flexmi/index.md': 'https://www.eclipse.org/epsilon/doc/flexmi'
-            'doc/articles/picto/index.md': 'https://www.eclipse.org/epsilon/doc/picto'
-            'doc/articles/exeed-reference/index.md': 'https://www.eclipse.org/epsilon/doc/exeed'
-
 
 copyright: 'Copyright © Eclipse Foundation, Inc. All Rights Reserved.'
 extra_css:
@@ -119,6 +107,3 @@ extra_javascript:
   - 'assets/javascript/google-code-prettify/lang-emfatic.js'
   - 'assets/javascript/google-code-prettify/lang-epsilon.js'
   - 'assets/javascript/google-code-prettify/prettyprint.js'
-google_analytics:
-  - UA-184785655-1
-  - auto
