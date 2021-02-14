@@ -1,0 +1,124 @@
+site_name: Emfatic
+nav:
+  - Home: index.md
+  - Download: download.md
+  - Community:
+      - Who is developing Emfatic?: 'https://projects.eclipse.org/projects/modeling.emft.emfatic/who'
+      - Forum: 'https://www.eclipse.org/forums/index.php/f/19/'
+      
+theme:
+  name: material
+  custom_dir: custom_theme
+repo_name: 'Git repository @ Eclipse'
+repo_url: 'https://git.eclipse.org/c/emfatic/org.eclipse.emfatic.git/'
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid mermaid-100
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-90
+          class: mermaid mermaid-90
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-80
+          class: mermaid mermaid-80
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-70
+          class: mermaid mermaid-70
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-60
+          class: mermaid mermaid-60
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-50
+          class: mermaid mermaid-50
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-40
+          class: mermaid mermaid-40
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid-30
+          class: mermaid mermaid-30
+          format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: eol
+          class: prettyprint lang-eol
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: etl
+          class: prettyprint lang-etl
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: ecl
+          class: prettyprint lang-ecl
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: eml
+          class: prettyprint lang-eml
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: epl
+          class: prettyprint lang-epl
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: evl
+          class: prettyprint lang-evl
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: mig
+          class: prettyprint lang-mig
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: eunit
+          class: prettyprint lang-eol
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: egx
+          class: prettyprint lang-egx
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: egl
+          class: prettyprint lang-egl
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: emf
+          class: prettyprint lang-emf
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: pinset
+          class: prettyprint lang-pinset
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - meta
+  - footnotes
+  - pymdownx.tabbed
+  - pymdownx.details
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+plugins:
+    - search
+    - macros:
+        j2_block_start_string: '{{{%'
+        j2_block_end_string: '%}}}'
+        j2_variable_start_string: '{{{'
+        j2_variable_end_string: '}}}'
+    - redirects:
+        redirect_maps:
+            'forum': 'https://www.eclipse.org/forums/index.php/f/22/'
+            'doc/screencasts' : 'https://www.youtube.com/epsilondevs'
+            'doc/lectures' : 'https://www.youtube.com/playlist?list=PLRwHao6Ue0YUecg7vEUQTrtySIWwrd_mI'
+            'doc/examples' : 'https://git.eclipse.org/c/epsilon/org.eclipse.epsilon.git/tree/examples'
+            'doc/articles/emfatic.md': 'https://www.eclipse.org/emfatic'
+            'doc/articles/eugenia-gmf-tutorial/index.md': 'https://www.eclipse.org/epsilon/doc/eugenia'
+            'doc/articles/flexmi/index.md': 'https://www.eclipse.org/epsilon/doc/flexmi'
+            'doc/articles/picto/index.md': 'https://www.eclipse.org/epsilon/doc/picto'
+            'doc/articles/exeed-reference/index.md': 'https://www.eclipse.org/epsilon/doc/exeed'
+
+
+copyright: 'Copyright © Eclipse Foundation, Inc. All Rights Reserved.'
+extra_css:
+  - 'assets/stylesheets/extra.css'
+  - 'assets/stylesheets/mermaid.css'
+  - 'assets/javascript/google-code-prettify/prettify.css'
+  #- 'assets/stylesheets/tabbed.css'
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+  - 'assets/javascript/mermaid.js'
+  - 'assets/javascript/jquery.js'
+  - 'assets/javascript/google-code-prettify/prettify.js'
+  - 'assets/javascript/google-code-prettify/lang-emfatic.js'
+  - 'assets/javascript/google-code-prettify/lang-epsilon.js'
+  - 'assets/javascript/google-code-prettify/prettyprint.js'
+google_analytics:
+  - UA-184785655-1
+  - auto
