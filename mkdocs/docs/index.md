@@ -48,7 +48,7 @@ namespace, uri and prefix in the text above could be written in any
 case.  Also note that the order of declaration for uri and prefix is not
 important. The syntax of the @namespace declaration is actually a
 special case of the more general syntax for declaring EAnnotations,
-which will be described in full detail in section 5 below.
+which will be described in full detail [below](#annotations).
 
 ### Sub-Packages
 
