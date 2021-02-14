@@ -1,0 +1,17 @@
+.md-header-nav__title {
+	padding-left: 0px;
+	margin-left:0px;
+}
+
+.epsilon-eclipse-links {
+    display: table;
+}
+
+.epsilon-eclipse-links ul {
+    display: table-row;
+}
+
+.epsilon-eclipse-links li {
+    display: table-cell;
+    padding: 1em;
+}
