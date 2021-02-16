@@ -52,6 +52,9 @@ which will be described in full detail [below](#annotations).
 
 ### Sub-Packages
 
+!!! warning
+    While Ecore and Emfatic support nested/sub-packages, [their use is discouraged](https://eclipsesource.com/blogs/2013/03/19/emf-dos-and-donts-5/) as many tools that build on top of EMF don't work well with them.
+
 Ecore allows packages to be nested inside packages.  In Emfatic, the
 syntax for nested packages differs from that of the main package. 
 Nested package declarations are followed by a curly-brace bracketed
@@ -109,10 +112,7 @@ attributes `interface` and `abstract`.
 
 ```emf
 package main;
-class C1 {
-}
-// isInterface=false, isAbstract=false
-
+class C1 { } // isInterface=false, isAbstract=false
 abstract class C2 { } // isInterface=false, isAbstract=true
 interface I1 { } // isInterface=true,  isAbstract=false
 abstract interface I2 { } // isInterface=true,  isAbstract=true
@@ -214,7 +214,6 @@ and comments below describe the rules for this.
 ```emf
 enum E {
   A;  // = 0 (if not specified, first literal has value 0)
-
   B = 3;
   C; // = 4 (in general, unspecified values are 1 greater than previous value)
   D; // = 5
@@ -465,7 +464,7 @@ appear directly before the feature's type expression.  The table below
 describes each modifier.
 
 
-| modifier     | means                                 | applies to |
+| Modifier     | Means                                 | Applies to |
 | ------------ | --------------------------------------| ---------- |
 | readonly     | EStructuralFeature.changeable = false | attribute, reference |
 | volatile     | EStructuralFeature.volatile = true    | attribute, reference |
