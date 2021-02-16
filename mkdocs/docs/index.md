@@ -4,6 +4,8 @@ Emfatic is a textual syntax for [EMF Ecore](http://www.eclipse.org/emf)
 (meta-)models. This page details the syntax of Emfatic and the mapping between
 Emfatic declarations and the corresponding Ecore constructs.
 
+![](assets/images/emfatic-editor.png)
+
 ## Packages
 
 Emfatic programs are shown in boxes as in the example
