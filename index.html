@@ -724,6 +724,10 @@ important. The syntax of the @namespace declaration is actually a
 special case of the more general syntax for declaring EAnnotations,
 which will be described in full detail <a href="#annotations">below</a>.</p>
 <h3 id="sub-packages">Sub-Packages<a class="headerlink" href="#sub-packages" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While Ecore and Emfatic support nested/sub-packages, <a href="https://eclipsesource.com/blogs/2013/03/19/emf-dos-and-donts-5/">their use is discouraged</a> as many tools that build on top of EMF don't work well with them.</p>
+</div>
 <p>Ecore allows packages to be nested inside packages.  In Emfatic, the
 syntax for nested packages differs from that of the main package. 
 Nested package declarations are followed by a curly-brace bracketed
@@ -766,10 +770,7 @@ and also introduces Emfatic comments (Emfatic allows both styles of Java
 comments).  The comments detail the mapping from Emfatic to the <code>EClass</code>
 attributes <code>interface</code> and <code>abstract</code>.</p>
 <pre class="prettyprint lang-emf"><code>package main;
-class C1 {
-}
-// isInterface=false, isAbstract=false
-
+class C1 { } // isInterface=false, isAbstract=false
 abstract class C2 { } // isInterface=false, isAbstract=true
 interface I1 { } // isInterface=true,  isAbstract=false
 abstract interface I2 { } // isInterface=true,  isAbstract=true</code></pre>
@@ -848,7 +849,6 @@ generates reasonable values when they are left unspecified.  The code
 and comments below describe the rules for this.</p>
 <pre class="prettyprint lang-emf"><code>enum E {
   A;  // = 0 (if not specified, first literal has value 0)
-
   B = 3;
   C; // = 4 (in general, unspecified values are 1 greater than previous value)
   D; // = 5
@@ -1223,9 +1223,9 @@ describes each modifier.</p>
 <table>
 <thead>
 <tr>
-<th>modifier</th>
-<th>means</th>
-<th>applies to</th>
+<th>Modifier</th>
+<th>Means</th>
+<th>Applies to</th>
 </tr>
 </thead>
 <tbody>
