@@ -1,14 +1,15 @@
 # Download
 
-You can use the following update site through the `Help->Install new software` menu in Eclipse to install Emfatic.
+You can use the following update sites through the `Help->Install new software` menu in Eclipse to install Emfatic.
 
 | Site | Location |
 | - | - |
 | Stable | `http://download.eclipse.org/emfatic/update`|
+| Interim | `http://download.eclipse.org/emfatic/interim`|
 
 ## Maven
 
-Emfatic JARs are available from [Sonatype](https://oss.sonatype.org/#nexus-search;quick~emfatic). To use the Emfatic JAR from your `pom.xml`:
+JARs of stable versions of Emfatic are available on [Maven Central](https://mvnrepository.com/artifact/org.eclipse.emfatic/org.eclipse.emfatic.core). Emfatic interm JARs are available from [Sonatype](https://oss.sonatype.org/#nexus-search;quick~emfatic). To use the Emfatic from your `pom.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +38,7 @@ Emfatic JARs are available from [Sonatype](https://oss.sonatype.org/#nexus-searc
     <dependency>
       <groupId>org.eclipse.emfatic</groupId>
       <artifactId>org.eclipse.emfatic.core</artifactId>
-      <version>0.8.0-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
