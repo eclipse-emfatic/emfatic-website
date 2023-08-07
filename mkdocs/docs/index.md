@@ -157,8 +157,7 @@ datatype EIntegerObject : java.lang.Integer;
 transient datatype EJavaObject : java.lang.Object;
 
 datatype EFeatureMapEntry : org.eclipse.emf.ecore.util.FeatureMap$Entry;
-datatype EByteArray : "byte[]";  // Note: [ and ] are not legal
-identifier characters and must be in quotes
+datatype EByteArray : "byte[]";  // Note: [ and ] are not legal identifier characters and must be in quotes
 ```
 
 First note that as with classes, the value of the `EClassifier`
