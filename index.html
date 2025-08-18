@@ -740,7 +740,7 @@ below:</p>
 <pre class="prettyprint lang-emf"><code>package test;
 class Foo { }</code></pre>
 <p>When compiled, the program above will produce a model with an <code>EPackage</code>
-named "test" containing a single <code>EClass</code> named "Foo".</p>
+named "test" containing a single <code>EClass</code> named <code>Foo</code>.</p>
 <p>As is probably clear from the first Emfatic program above, the keyword
 package introduces an Ecore <code>EPackage</code> and the identifier following it
 maps to the <code>name</code> attribute of the generated <code>EPackage</code>.</p>
@@ -758,9 +758,9 @@ is done like this:</p>
 package ecore;</code></pre>
 <p>Note that Emfatic is case-sensitive in most contexts (reflecting the
 underlying case-sensitivity of Ecore), however the identifiers
-namespace, uri and prefix in the text above could be written in any
+<code>namespace</code>, <code>uri</code> and <code>prefix</code> in the text above could be written in any
 case.  Also note that the order of declaration for uri and prefix is not
-important. The syntax of the @namespace declaration is actually a
+important. The syntax of the <code>@namespace</code> declaration is actually a
 special case of the more general syntax for declaring EAnnotations,
 which will be described in full detail <a href="#annotations">below</a>.</p>
 <h3 id="sub-packages">Sub-Packages<a class="headerlink" href="#sub-packages" title="Permanent link">&para;</a></h3>
@@ -783,8 +783,8 @@ package sub2 {
   package sub2_2 { }
 }</code></pre>
 <p>In the Ecore model generated from the above program, the top-level
-package named "main" will contain two packages, "sub1" and "sub2",
-and package sub2 will contain the packages "sub2_1" and "sub2_2".</p>
+package named <code>main</code> will contain two packages, <code>sub1</code> and <code>sub2</code>,
+and package <code>sub2</code> will contain the packages <code>sub2_1</code> and <code>sub2_2</code>.</p>
 <h3 id="main-package-imports">Main Package Imports<a class="headerlink" href="#main-package-imports" title="Permanent link">&para;</a></h3>
 <p>Import statements allow for types defined in external Ecore models to be
 referenced.  All import statements must immediately follow the main
@@ -911,7 +911,7 @@ represented syntactically, because that applies (more or less) to all of
 them.</p>
 <p>Type expressions have two parts.  First is a simple identifier or a
 qualified identifier (a dot-separated list of simple identifiers like
-"a.b.c") that identifies some <code>EClassifier</code>.  The <code>EClassifier</code>
+<code>a.b.c</code>) that identifies some <code>EClassifier</code>.  The <code>EClassifier</code>
 identified may be defined in the same Emfatic source file as the type
 expression, or it may be in one of the imported Ecore models (specified
 in import statements).</p>
@@ -931,30 +931,30 @@ class C {
   attr ecore.EString s1;
   attr String s2;
 }</code></pre>
-<p>The class named "C" above declares four attributes with the names
-"d1", "d2", "s1" and "s2".  Note that Emfatic follows Java
+<p>The class named <code>C</code> above declares four attributes with the names
+<code>d1</code>, <code>d2</code>, <code>s1</code> and <code>s2</code>.  Note that Emfatic follows Java
 syntactic style in placing type expression before the name.  However
 unlike Java field declarations, Emfatic uses a keyword - <code>attr</code> - to
 introduce an attribute. (The keyword <code>attr</code> and similar keywords to
 introduce references and operations will explained in more detail in the
 following sub-sections).</p>
-<p>The type expression for d1 is "D1" which identifies the datatype D1. 
-Because C and D1 are in the same package (test), this simple expression
+<p>The type expression for <code>d1</code> is <code>D1</code> which identifies the datatype <code>D1</code>. 
+Because <code>C</code> and <code>D1</code> are in the same package (<code>test</code>), this simple expression
 is fine.</p>
-<p>The type expression for d2 is "P.D2".  In this case a qualified
-identifier expression is necessary to identify datatype D2 inside
-package P.</p>
-<p>The type expression for s1 is "ecore.EString".  This identifies the
-datatype EString in package ecore (recall that model Ecore.ecore is
+<p>The type expression for <code>d2</code> is <code>P.D2"</code>  In this case a qualified
+identifier expression is necessary to identify datatype <code>D2</code> inside
+package <code>P</code>.</p>
+<p>The type expression for s1 is <code>ecore.EString</code>.  This identifies the
+datatype <code>EString</code> in package <code>ecore</code> (recall that model Ecore.ecore is
 implicitly imported in all Emfatic programs).</p>
-<p>The type expression for s2 is "String".  The identifier String is
-actually a special shorthand for ecore.EString, so s1 and s2 have the
+<p>The type expression for <code>s2</code> is <code>String</code>.  The identifier <code>String</code> is
+actually a special shorthand for <code>ecore.EString</code>, so <code>s1</code> and <code>s2</code> have the
 same type.</p>
 <h3 id="basic-types">Basic Types<a class="headerlink" href="#basic-types" title="Permanent link">&para;</a></h3>
-<p>A number of the types defined in Ecore.ecore have shorthand notation in
-Emfatic.  The table below lists the Emfatic shorthand and the
+<p>A number of the types defined in Ecore.ecore have <a href="https://github.com/eclipse-emfatic/emfatic/blob/master/bundles/org.eclipse.emf.emfatic.core/src/org/eclipse/emf/emfatic/core/util/EmfaticBasicTypes.java">shorthand notation in
+Emfatic</a>. The table below lists the Emfatic shorthand and the
 corresponding Ecore.ecore type name for each of these basic types as
-well as the corresponding Java type or class.</p>
+well as the corresponding Java type or class. </p>
 <table>
 <thead>
 <tr>
@@ -1080,6 +1080,16 @@ well as the corresponding Java type or class.</p>
 types in Ecore.ecore, by using their fully qualified name which begins
 with the package prefix "ecore".  For example <code>ecore.EOperation</code> and
 <code>ecore.EBigInteger</code> are also legal references to types in Ecore.ecore.</p>
+<div class="admonition info">
+<p class="admonition-title">Supported Date Formats</p>
+<p>EMF provides built-in support for the following <a href="https://github.com/eclipse-emf/org.eclipse.emf/blob/5a62f269ed73a54af6a636cb3e001cfa6683fefb/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/impl/EFactoryImpl.java#L65">date formats</a>:</p>
+<div class="highlight"><pre><span></span><code>yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;.&#39;SSSZ
+yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;.&#39;SSS
+yyyy-MM-dd&#39;T&#39;HH:mm:ss
+yyyy-MM-dd&#39;T&#39;HH:mm
+yyyy-MM-dd
+</code></pre></div>
+</div>
 <h3 id="multiplicity-expressions">Multiplicity Expressions<a class="headerlink" href="#multiplicity-expressions" title="Permanent link">&para;</a></h3>
 <p>The second part of a type expression is the multiplicity expression. 
 This maps to the <code>lowerBound</code> and <code>upperBound</code> attributes of
