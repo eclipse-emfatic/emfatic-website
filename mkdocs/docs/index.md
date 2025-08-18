@@ -17,7 +17,7 @@ class Foo { }
 ```
 
 When compiled, the program above will produce a model with an `EPackage`
-named "test" containing a single `EClass` named "Foo".
+named "test" containing a single `EClass` named `Foo`.
 
 As is probably clear from the first Emfatic program above, the keyword
 package introduces an Ecore `EPackage` and the identifier following it
@@ -46,9 +46,9 @@ package ecore;
 
 Note that Emfatic is case-sensitive in most contexts (reflecting the
 underlying case-sensitivity of Ecore), however the identifiers
-namespace, uri and prefix in the text above could be written in any
+`namespace`, `uri` and `prefix` in the text above could be written in any
 case.  Also note that the order of declaration for uri and prefix is not
-important. The syntax of the @namespace declaration is actually a
+important. The syntax of the `@namespace` declaration is actually a
 special case of the more general syntax for declaring EAnnotations,
 which will be described in full detail [below](#annotations).
 
@@ -76,8 +76,8 @@ package sub2 {
 ```
 
 In the Ecore model generated from the above program, the top-level
-package named "main" will contain two packages, "sub1" and "sub2",
-and package sub2 will contain the packages "sub2_1" and "sub2_2".
+package named `main` will contain two packages, `sub1` and `sub2`,
+and package `sub2` will contain the packages `sub2_1` and `sub2_2`.
 
 
 ### Main Package Imports
@@ -255,7 +255,7 @@ them.
 
 Type expressions have two parts.  First is a simple identifier or a
 qualified identifier (a dot-separated list of simple identifiers like
-"a.b.c") that identifies some `EClassifier`.  The `EClassifier`
+`a.b.c`) that identifies some `EClassifier`.  The `EClassifier`
 identified may be defined in the same Emfatic source file as the type
 expression, or it may be in one of the imported Ecore models (specified
 in import statements).
@@ -280,36 +280,36 @@ class C {
 }
 ```
 
-The class named "C" above declares four attributes with the names
-"d1", "d2", "s1" and "s2".  Note that Emfatic follows Java
+The class named `C` above declares four attributes with the names
+`d1`, `d2`, `s1` and `s2`.  Note that Emfatic follows Java
 syntactic style in placing type expression before the name.  However
 unlike Java field declarations, Emfatic uses a keyword - `attr` - to
 introduce an attribute. (The keyword `attr` and similar keywords to
 introduce references and operations will explained in more detail in the
 following sub-sections).
 
-The type expression for d1 is "D1" which identifies the datatype D1. 
-Because C and D1 are in the same package (test), this simple expression
+The type expression for `d1` is `D1` which identifies the datatype `D1`. 
+Because `C` and `D1` are in the same package (`test`), this simple expression
 is fine.
 
-The type expression for d2 is "P.D2".  In this case a qualified
-identifier expression is necessary to identify datatype D2 inside
-package P.
+The type expression for `d2` is `P.D2"`  In this case a qualified
+identifier expression is necessary to identify datatype `D2` inside
+package `P`.
 
-The type expression for s1 is "ecore.EString".  This identifies the
-datatype EString in package ecore (recall that model Ecore.ecore is
+The type expression for s1 is `ecore.EString`.  This identifies the
+datatype `EString` in package `ecore` (recall that model Ecore.ecore is
 implicitly imported in all Emfatic programs).
 
-The type expression for s2 is "String".  The identifier String is
-actually a special shorthand for ecore.EString, so s1 and s2 have the
+The type expression for `s2` is `String`.  The identifier `String` is
+actually a special shorthand for `ecore.EString`, so `s1` and `s2` have the
 same type.
 
 ### Basic Types
 
-A number of the types defined in Ecore.ecore have shorthand notation in
-Emfatic.  The table below lists the Emfatic shorthand and the
+A number of the types defined in Ecore.ecore have [shorthand notation in
+Emfatic](https://github.com/eclipse-emfatic/emfatic/blob/master/bundles/org.eclipse.emf.emfatic.core/src/org/eclipse/emf/emfatic/core/util/EmfaticBasicTypes.java). The table below lists the Emfatic shorthand and the
 corresponding Ecore.ecore type name for each of these basic types as
-well as the corresponding Java type or class.
+well as the corresponding Java type or class. 
 
 | Emfatic Keyword    | Ecore EClassifier name  | Java type name |
 | ---------------    | ----------------------  | -------------- |
@@ -336,12 +336,21 @@ well as the corresponding Java type or class.
 | EObject            | EObject                 | org.eclipse.emf.ecore.EObject |
 | EClass             | EClass                  | org.eclipse.emf.ecore.EClass |
 
-
 Remember that you can always reference these types, and the rest of the
 types in Ecore.ecore, by using their fully qualified name which begins
 with the package prefix "ecore".  For example `ecore.EOperation` and
 `ecore.EBigInteger` are also legal references to types in Ecore.ecore.
 
+!!! info "Supported Date Formats"
+    EMF provides built-in support for the following [date formats](https://github.com/eclipse-emf/org.eclipse.emf/blob/5a62f269ed73a54af6a636cb3e001cfa6683fefb/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/impl/EFactoryImpl.java#L65):
+
+    ```
+    yyyy-MM-dd'T'HH:mm:ss'.'SSSZ
+    yyyy-MM-dd'T'HH:mm:ss'.'SSS
+    yyyy-MM-dd'T'HH:mm:ss
+    yyyy-MM-dd'T'HH:mm
+    yyyy-MM-dd
+    ```
 
 ### Multiplicity Expressions
 
